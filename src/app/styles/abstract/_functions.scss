@@ -1,0 +1,32 @@
+@use "sass:math";
+
+@function px-to-rem($px-value, $base: 16px) {
+  @return math.div($px-value, $base) * 1rem;
+}
+
+@function adjust-color($color, $percentage) {
+  @if $percentage > 0 {
+    @return lighten($color, $percentage);
+  } @else {
+    @return darken($color, abs($percentage));
+  }
+}
+
+@function scale-spacing($factor) {
+  $base-spacing: 1rem;
+  @return $factor * $base-spacing;
+}
+
+@function theme-color($theme, $key) {
+  @return map-get($theme, $key);
+}
+
+@function contrast-color($color, $dark: #000000, $light: #ffffff) {
+  $yiq: ((red($color) * 299) + (green($color) * 587) + (blue($color) * 114)) /
+    1000;
+  @if $yiq >= 128 {
+    @return $dark;
+  } @else {
+    @return $light;
+  }
+}

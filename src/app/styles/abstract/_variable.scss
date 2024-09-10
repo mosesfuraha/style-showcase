@@ -1,0 +1,34 @@
+$primary-color: #7c5dfa;
+$secondary-color: #9277ff;
+$background-light: #ffffff;
+$background-dark: #141625;
+$text-light: #1e2139;
+$text-dark: #dfe3fa;
+$accent-color: #252945;
+$muted-color: #888eb0;
+$highlight-color: #7e88c3;
+$error-color: #ec5757;
+$border-color: #252945;
+$link-color: #9277ff;
+
+$light-theme-colors: (
+  background: $background-light,
+  text: $text-light,
+  primary: $primary-color,
+  secondary: $secondary-color,
+  accent: $accent-color,
+  muted: $muted-color,
+  border: $border-color,
+  link: $link-color,
+);
+
+$dark-theme-colors: (
+  background: $background-dark,
+  text: $text-dark,
+  primary: $primary-color,
+  secondary: $secondary-color,
+  accent: $accent-color,
+  muted: $muted-color,
+  border: $border-color,
+  link: $link-color,
+);

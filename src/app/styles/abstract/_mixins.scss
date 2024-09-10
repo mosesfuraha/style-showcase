@@ -1,0 +1,32 @@
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin apply-theme($theme) {
+  background-color: map-get($theme, background);
+  color: map-get($theme, text);
+
+  a {
+    color: map-get($theme, link);
+
+    &:hover {
+      color: darken(map-get($theme, link), 10%);
+    }
+  }
+
+  .btn {
+    background-color: map-get($theme, primary);
+    color: #fff;
+
+    &:hover {
+      background-color: darken(map-get($theme, primary), 10%);
+    }
+  }
+
+  .bordered {
+    border: 1px solid map-get($theme, border);
+  }
+}

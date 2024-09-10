@@ -1,0 +1,51 @@
+@import "../abstract/variable";
+@import "../abstract/functions";
+@import "../abstract/mixins";
+
+.header {
+  @include flex-center(row, space-between, center);
+
+  background-color: theme-color($light-theme-colors, background);
+
+  padding: scale-spacing(1);
+
+  .logo {
+    font-size: px-to-rem(24px);
+    font-weight: bold;
+    color: $secondary-color;
+    font-weight: 700;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: scale-spacing(1.5);
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: $background-dark;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $highlight-color;
+          }
+        }
+      }
+    }
+    img {
+      width: 20px;
+      height: 19px;
+      margin-left: scale-spacing(1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

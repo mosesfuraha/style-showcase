@@ -1,0 +1,29 @@
+@import "../abstract/variable";
+@import "../abstract/functions";
+@import "../abstract/mixins";
+
+.footer {
+  @include flex-center(row, center, center);
+
+  background-color: theme-color($light-theme-colors, background);
+  color: theme-color($light-theme-colors, text);
+  padding: scale-spacing(2);
+  gap: scale-spacing(3);
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: px-to-rem(18px);
+    font-weight: bold;
+    color: theme-color($light-theme-colors, primary);
+  }
+
+  p {
+    font-size: px-to-rem(14px);
+    color: theme-color($light-theme-colors, muted);
+    margin: 0;
+  }
+}
+//footer styles
