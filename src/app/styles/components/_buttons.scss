@@ -1,0 +1,76 @@
+@use "../../styles/abstract/variable";
+@use "../../styles/abstract/functions";
+@use "../../styles/abstract/mixins";
+
+.button {
+  display: inline-block;
+  padding: functions.scale-spacing(1) functions.scale-spacing(2);
+  font-size: functions.px-to-rem(16px);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: functions.px-to-rem(20px);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease,
+    border-color 0.3s ease;
+  border: 1px solid variable.$border-color;
+  background-color: transparent;
+  color: variable.$text-light;
+
+  &.primary {
+    border-color: variable.$border-color;
+
+    &:hover {
+      background-color: #ffffff;
+      color: variable.$text-light;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      background-color: variable.$primary-color;
+      color: #ffffff;
+      transform: translateY(1px);
+    }
+  }
+
+  &.secondary {
+    border-color: variable.$secondary-color;
+
+    &:hover {
+      background-color: #ffffff;
+      color: variable.$text-light;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      background-color: variable.$secondary-color;
+      color: #ffffff;
+      transform: translateY(1px);
+    }
+  }
+
+  &.outline {
+    border-color: variable.$primary-color;
+    color: variable.$text-light;
+
+    &:hover {
+      background-color: #ffffff;
+      color: variable.$text-light;
+    }
+
+    &:active {
+      background-color: variable.$primary-color;
+      color: #ffffff;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: transparent;
+    border-color: variable.$muted-color;
+    color: variable.$muted-color;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+  }
+}
