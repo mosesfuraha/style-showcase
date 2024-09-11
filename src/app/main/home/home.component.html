@@ -1,4 +1,4 @@
-<h2>Welcome to Our Store!</h2>
+<h2>New Arrivals</h2>
 
 <div *ngIf="sliderItems.length > 0; else loading">
   <div class="slider-container">
@@ -6,13 +6,13 @@
       <img [src]="item.imageUrl" [alt]="item.title" />
       <h3>{{ item.title }}</h3>
       <p>{{ item.description }}</p>
-      <button class="button primary">Quick View</button> <!-- Apply primary button class -->
+      <button class="button primary">Quick View</button>
     </div>
   </div>
 </div>
 
 <ng-template #loading>
-  <p>Loading slider items...</p>
+  <p>Loading new arrivals...</p>
 </ng-template>
 
 <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>

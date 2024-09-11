@@ -1,0 +1,84 @@
+@use "../../styles/abstract/variable";
+@use "../../styles/abstract/functions";
+@use "../../styles/abstract/mixins";
+@use "../../styles/components/buttons";
+
+.about-us {
+  padding: functions.scale-spacing(1);
+  color: variable.$text-light;
+  background-color: variable.$background-light;
+
+  .about-hero {
+    text-align: center;
+    margin-bottom: functions.scale-spacing(3);
+
+    h1 {
+      font-size: functions.px-to-rem(32px);
+      margin-bottom: functions.scale-spacing(1);
+      color: variable.$accent-color;
+    }
+
+    p {
+      font-size: functions.px-to-rem(18px);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: variable.$text-light;
+    }
+  }
+
+  .about-content {
+    @include mixins.flex-center(row, center, center);
+    flex-wrap: wrap;
+    gap: functions.scale-spacing(2);
+    .mission,
+    .story,
+    .team,
+    .contact-us {
+      margin-bottom: functions.scale-spacing(3);
+      width: 220px;
+      height: 300px;
+      text-align: center;
+      background-color: variable.$background-light;
+      padding: functions.scale-spacing(1);
+      border: 1px solid variable.$border-color;
+      border-radius: functions.px-to-rem(8px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+
+      h2 {
+        font-size: functions.px-to-rem(24px);
+        margin-bottom: functions.scale-spacing(1);
+        color: variable.$secondary-color;
+      }
+
+      p,
+      ul {
+        font-size: functions.px-to-rem(16px);
+        line-height: 1.6;
+        color: variable.$text-light;
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: functions.scale-spacing(3);
+
+        li {
+          margin-bottom: functions.scale-spacing(0.5);
+
+          strong {
+            color: variable.$primary-color;
+          }
+        }
+      }
+    }
+
+    .contact-us {
+      text-align: center;
+
+      .button.primary {
+        margin-top: functions.scale-spacing(1);
+      }
+    }
+  }
+}

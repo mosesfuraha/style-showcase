@@ -13,11 +13,10 @@ const routes: Routes = [
       import('./home/home.component').then((m) => m.HomeComponent),
   },
   {
-    path: 'contact',
+    path: 'products',
     loadComponent: () =>
-      import('./contact/contact.component').then((m) => m.ContactComponent),
+      import('./product/product.component').then((m) => m.ProductComponent),
   },
-
   {
     path: '',
     redirectTo: 'home',
