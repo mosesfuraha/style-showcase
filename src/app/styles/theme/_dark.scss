@@ -1,0 +1,23 @@
+@use "../abstract/variable";
+
+$background-dark: #141625;
+$text-dark: #dfe3fa;
+$primary-color-dark: #7c5dfa;
+$secondary-color-dark: #9277ff;
+$accent-color-dark: #252945;
+$muted-color-dark: #888eb0;
+$highlight-color-dark: #7e88c3;
+$error-color-dark: #ec5757;
+$border-color-dark: #252945;
+$link-color-dark: #9277ff;
+
+$dark-theme-colors: (
+  background: $background-dark,
+  text: $text-dark,
+  primary: $primary-color-dark,
+  secondary: $secondary-color-dark,
+  accent: $accent-color-dark,
+  muted: $muted-color-dark,
+  border: $border-color-dark,
+  link: $link-color-dark,
+);

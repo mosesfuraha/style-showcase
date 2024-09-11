@@ -1,12 +1,10 @@
 @import "variables";
 @import "mixins";
 
-// Apply Light Theme
 .light-mode {
   @include apply-theme($light-theme-colors);
 }
 
-// Apply Dark Theme
 .dark-mode {
   @include apply-theme($dark-theme-colors);
 }

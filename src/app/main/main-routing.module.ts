@@ -8,7 +8,7 @@ const routes: Routes = [
       import('./about/about.component').then((m) => m.AboutComponent),
   },
   {
-    path: 'home',
+    path: '',
     loadComponent: () =>
       import('./home/home.component').then((m) => m.HomeComponent),
   },
@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full',
   },
 ];

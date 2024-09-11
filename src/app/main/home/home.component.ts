@@ -1,4 +1,3 @@
-// src/app/main/home/home.component.ts
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -13,7 +12,7 @@ interface SliderItem {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule], // Import CommonModule for Angular directives
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

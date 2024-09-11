@@ -1,0 +1,23 @@
+@use "../abstract/variable";
+
+$background-light: #ffffff;
+$text-light: #1e2139;
+$primary-color-light: #7c5dfa;
+$secondary-color-light: #9277ff;
+$accent-color-light: #252945;
+$muted-color-light: #888eb0;
+$highlight-color-light: #7e88c3;
+$error-color-light: #ec5757;
+$border-color-light: #252945;
+$link-color-light: #9277ff;
+
+$light-theme-colors: (
+  background: $background-light,
+  text: $text-light,
+  primary: $primary-color-light,
+  secondary: $secondary-color-light,
+  accent: $accent-color-light,
+  muted: $muted-color-light,
+  border: $border-color-light,
+  link: $link-color-light,
+);

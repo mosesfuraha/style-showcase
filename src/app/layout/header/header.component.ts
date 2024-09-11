@@ -10,5 +10,11 @@ export class HeaderComponent {
 
   toggleMode() {
     this.isDarkMode = !this.isDarkMode;
+    // Toggle the 'dark-mode' class on the body element
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
   }
 }
