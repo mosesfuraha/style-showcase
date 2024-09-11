@@ -10,6 +10,10 @@
         alt="Moon Icon"
         *ngIf="!isDarkMode"
         (click)="toggleMode()"
+        (keydown.enter)="toggleMode()"
+        tabindex="0"
+        role="button"
+        aria-label="Activate dark mode"
       />
 
       <img
@@ -17,6 +21,10 @@
         alt="Sun Icon"
         *ngIf="isDarkMode"
         (click)="toggleMode()"
+        (keydown.enter)="toggleMode()"
+        tabindex="0"
+        role="button"
+        aria-label="Activate light mode"
       />
     </ul>
   </nav>

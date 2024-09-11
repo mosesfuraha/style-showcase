@@ -18,7 +18,7 @@ interface SliderItem {
 })
 export class HomeComponent implements OnInit {
   sliderItems: SliderItem[] = [];
-  errorMessage: string = '';
+  errorMessage = '';
 
   constructor(private http: HttpClient) {}
 

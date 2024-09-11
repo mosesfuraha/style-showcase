@@ -6,7 +6,6 @@
 .about-us {
   padding: functions.scale-spacing(1);
   color: variable.$text-light;
-  background-color: variable.$background-light;
 
   .about-hero {
     text-align: center;
@@ -15,7 +14,7 @@
     h1 {
       font-size: functions.px-to-rem(32px);
       margin-bottom: functions.scale-spacing(1);
-      color: variable.$accent-color;
+      color: inherit;
     }
 
     p {
@@ -23,7 +22,7 @@
       max-width: 600px;
       margin: 0 auto;
       line-height: 1.6;
-      color: variable.$text-light;
+      color: inherit;
     }
   }
 
@@ -33,17 +32,15 @@
     gap: functions.scale-spacing(2);
     .mission,
     .story,
-    .team,
-    .contact-us {
-      margin-bottom: functions.scale-spacing(3);
-      width: 220px;
-      height: 300px;
-      text-align: center;
-      background-color: variable.$background-light;
-      padding: functions.scale-spacing(1);
+    .team {
+      background-color: inherit;
       border: 1px solid variable.$border-color;
       border-radius: functions.px-to-rem(8px);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: functions.scale-spacing(2);
+      width: 220px;
+      height: 380px;
+
       overflow: hidden;
 
       h2 {
@@ -56,7 +53,7 @@
       ul {
         font-size: functions.px-to-rem(16px);
         line-height: 1.6;
-        color: variable.$text-light;
+        color: inherit;
       }
 
       ul {
