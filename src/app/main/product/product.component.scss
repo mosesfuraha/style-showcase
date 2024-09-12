@@ -7,6 +7,7 @@
   text-align: center;
   margin-bottom: functions.scale-spacing(2);
 }
+
 .product-container {
   @include mixins.flex-center(row, center, center);
   flex-wrap: wrap;
@@ -38,6 +39,12 @@
     object-fit: cover;
     border-radius: functions.px-to-rem(4px);
     margin-bottom: functions.scale-spacing(1);
+    transition: filter 0.3s ease;
+
+    &.loading {
+      filter: blur(8px); 
+      background-color: variable.$background-light; 
+    }
   }
 
   .product-title {
@@ -70,7 +77,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-   .button.primary {
+
+  .button.primary {
     margin-top: functions.scale-spacing(1);
     border: 1px solid variable.$primary-color;
   }
@@ -80,6 +88,7 @@
   color: variable.$error-color;
   text-align: center;
 }
-.loading{
+
+.loading {
   text-align: center;
 }

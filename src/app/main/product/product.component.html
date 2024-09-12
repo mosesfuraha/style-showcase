@@ -1,12 +1,12 @@
-<h2 class="heading-products">Our Products In store</h2>
+<h2 class="heading-products">Our Products In Store</h2>
 <div *ngIf="products$ | async as products; else loading">
   <div class="product-container">
     <div *ngFor="let product of products" class="product-card">
-      <img [src]="product.image" [alt]="product.title" class="product-image" />
+      <img appLazyLoad="{{ product.image }}" [alt]="product.title" class="product-image" />
       <h3 class="product-title">{{ product.title }}</h3>
       <p class="product-price">{{ product.price | currency }}</p>
       <p class="product-description">{{ product.description }}</p>
-       <button class="button primary">Add to Cart</button>
+      <button class="button primary">Add to Cart</button>
     </div>
   </div>
 </div>

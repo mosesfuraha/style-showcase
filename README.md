@@ -75,3 +75,17 @@ For more information on deploying Angular apps to Vercel, check out their [docum
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

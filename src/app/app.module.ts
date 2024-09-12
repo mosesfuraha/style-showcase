@@ -11,6 +11,6 @@ import { HeaderComponent } from './layout/header/header.component';
   declarations: [AppComponent, FooterComponent, HeaderComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

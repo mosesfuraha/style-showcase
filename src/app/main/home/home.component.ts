@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { LazyLoadDirective } from '../../directives/lazy-load.directive';
 
 interface SliderItem {
   id: number;
@@ -12,9 +13,9 @@ interface SliderItem {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LazyLoadDirective], 
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   sliderItems: SliderItem[] = [];
@@ -28,13 +29,13 @@ export class HomeComponent implements OnInit {
 
   fetchSliderData(): void {
     this.http.get<{ slider: SliderItem[] }>('assets/slider.json').subscribe({
-      next: (data) => {
+      next: data => {
         this.sliderItems = data.slider;
       },
-      error: (error) => {
+      error: error => {
         this.errorMessage = 'Error fetching slider data.';
         console.error('Error fetching slider data:', error);
-      },
+      }
     });
   }
 }

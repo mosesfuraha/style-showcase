@@ -17,7 +17,6 @@
   .header,
   .slider-container,
   .product-card,
-  .about-content,
   .about-us,
   .footer {
     background-color: map-get($theme, background);
@@ -26,7 +25,10 @@
   }
 
   .slider-item,
-  .product-card {
+  .product-card,
+  .mission,
+  .story,
+  .team {
     background-color: map-get($theme, accent);
     border: 1px solid map-get($theme, border);
 

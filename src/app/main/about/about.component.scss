@@ -5,13 +5,12 @@
 
 .about-us {
   padding: functions.scale-spacing(1);
-  color: variable.$text-light;
 
   .about-hero {
     text-align: center;
     margin-bottom: functions.scale-spacing(3);
 
-    h1 {
+    h2 {
       font-size: functions.px-to-rem(32px);
       margin-bottom: functions.scale-spacing(1);
       color: inherit;
@@ -30,6 +29,8 @@
     @include mixins.flex-center(row, center, center);
     flex-wrap: wrap;
     gap: functions.scale-spacing(2);
+    background-color: inherit;
+
     .mission,
     .story,
     .team {
@@ -40,41 +41,18 @@
       padding: functions.scale-spacing(2);
       width: 220px;
       height: 380px;
-
       overflow: hidden;
 
       h2 {
         font-size: functions.px-to-rem(24px);
         margin-bottom: functions.scale-spacing(1);
-        color: variable.$secondary-color;
-      }
-
-      p,
-      ul {
-        font-size: functions.px-to-rem(16px);
-        line-height: 1.6;
         color: inherit;
       }
 
-      ul {
-        list-style: disc;
-        padding-left: functions.scale-spacing(3);
-
-        li {
-          margin-bottom: functions.scale-spacing(0.5);
-
-          strong {
-            color: variable.$primary-color;
-          }
-        }
-      }
-    }
-
-    .contact-us {
-      text-align: center;
-
-      .button.primary {
-        margin-top: functions.scale-spacing(1);
+      p {
+        font-size: functions.px-to-rem(16px);
+        line-height: 1.6;
+        color: inherit;
       }
     }
   }

@@ -5,11 +5,12 @@ import { Product } from '../models/product.interface';
 import { ProductService } from '../services/product.service';
 import { catchError, retry, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+import { LazyLoadDirective } from '../../directives/lazy-load.directive';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, HttpClientModule], 
+  imports: [CommonModule, HttpClientModule, LazyLoadDirective], 
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
 })
